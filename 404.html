@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RGGOLIKSN GITHUB PAGE</title>
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #e7d9d9;
+            z-index: 225;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pre {
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #940000;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+            0% { transform: rotate(360deg); }
+            10% { transform: rotate(280deg); }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 3vh;
+            color: #333333;
+        }
+
+        h1, h2 {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div class="pre">
+        </div>
+        <h2 class="loading">Page Not Found!</h2>
+    </div>
+</body>
+</html>
