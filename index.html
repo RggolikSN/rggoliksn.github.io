@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RGGOLIKSN GITHUB PAGE</title>
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 225;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .pre {
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #333333;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+            0% { transform: rotate(360deg); }
+            10% { transform: rotate(280deg); }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 3vh;
+            color: #333333;
+        }
+
+        .header {
+            background-color: rgba(0, 89, 255, 0.4);
+            padding: 0.7vh 3vh;
+            position: sticky;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            border: 3px rgb(121, 168, 255) solid;
+            border-radius: 0.6vh;
+            cursor: pointer;
+            text-shadow: 0vh 0vh 5vh rgba(0, 0, 0, 0.4);
+            transition: cubic-bezier(.1,.68,0,.94) 1.5s;
+            top: 10px;
+            z-index: 224;
+        }
+
+        .left {
+            text-align: right;
+            align-items: center;
+            align-self: center;
+            padding-left: 30px;
+        }
+        
+        .comments {
+            text-shadow: 0vh 0vh 5vh rgba(0, 0, 0, 0.4);
+        }
+
+        h1, h2 {
+            font-family: sans-serif;
+        }
+
+        .nm {
+            text-shadow: 0vh 0vh 5vh rgba(0, 0, 0, 0.4);
+        }
+
+        .pr {
+            text-shadow: 0vh 0vh 5vh rgba(0, 0, 0, 0.4);
+        }
+
+        .bt {
+            transition: cubic-bezier(.1,.68,0,.94) 1.5s;
+            text-shadow: 0vh 0vh 5vh rgba(0, 0, 0, 0.4);
+            font-family: sans-serif;
+            background-color: rgba(0, 89, 255, 0.4);
+            padding: 3vh 10vh;
+            font-size: 5vh;
+            cursor: pointer;
+            border: 3px rgb(121, 168, 255) solid;
+            border-radius: 0.6vh;
+            margin: 1vh 0.7vh;
+        }
+
+        .header:hover {
+            background-color: rgba(0, 89, 255, 0.5);
+        }
+
+        .bt:hover {
+            background-color: rgba(0, 89, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div class="pre">
+        </div>
+        <h2 class="loading">Loading...</h2>
+    </div>
+    <header class="header" onclick="rggoliksn()">
+        <h1>Hello, world.</h1>
+        <h2 class="left">RGGOLIKSN</h2>
+    </header>
+    <h2 class="comments">I write music, I have a lot to do, I stream, I write code, I play, but for what purpose? :|</h2>
+    <h2 class="comments">I don't know a da*n thing about JS, well, I know a little, but I know Python, CSS, HTML, but still, I will learn JS, but then...</h2>
+    <h2 class="comments">Although I don’t even know how to change the style using js, I only follow links and alert</h2>
+    <h2 class="nm">I am, RGGOLIKSN</h2>
+    <h1 class="pr">My projects</h1>
+    <button class="bt" onclick="rgglide()">RGG-LIDE</button>
+    <button class="bt" onclick="Prikoll()">Prikoll</button>
+    <h1>About me</h1>
+    <h2>I live in Russia, I like it, I play CS2, Minecraft, Slime Rancher 2, a little Roblox, and everything else.</h2>
+    <h2>Started writing tracks in 2024.</h2>
+    <h2>I may be a senior developer, but most likely I'm a junior developer. After all, I don't know JS well, and I just write code to pass the time.</h2>
+    <h2>I'll just make websites for fun, but I will and will continue to write websites, just so I don't forget coding and learn new languages. Imagine, I can't write something easy in the scratch language, but I can do something in python, and in html, scratch is not my thing.</h2>
+    <script>
+    function rgglide() {
+        document.location.href = 'https://rggoliksn.github.io/RGG-LIDE'
+    }
+
+    function rggoliksn() {
+        document.location.href = 'https://rggoliksn.github.io'
+    }
+
+    function Prikoll() {
+        document.location.href = 'https://rggoliksn.github.io/prikol/'
+    }
+    window.onload = function() {
+        setInterval(function(){
+            var preloader = document.getElementById('preloader');
+            var content = document.getElementById('content');
+            preloader.classList.add('hidden');
+            content.style.display = 'block'; 
+        }, 84);  
+        };
+    async function ping(url) {
+    const start = performance.now();
+    try {
+        const response = await fetch(url, {    
+        cache: 'no-cache',
+        mode: 'no-cors',
+        method: 'HEAD'
+        });
+        const end = performance.now();
+        console.log(`P. ${(end - start).toFixed(2)}`);
+    } catch (error) {
+        console.error(`${error.message}`);
+    }
+    }
+    ping('https://rggoliksn.github.io');
+    setInterval(function(){
+        ping('https://rggoliksn.github.io');
+    },1000)
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script>
+    SmoothScroll({
+        animationTime    : 800,
+        stepSize         : 40,
+
+        accelerationDelta : 40,  
+        accelerationMax   : 2,   
+
+        keyboardSupport   : true,  
+        arrowScroll       : 40,
+
+        pulseAlgorithm   : true,
+        pulseScale       : 10,
+        pulseNormalize   : 1,
+
+        touchpadSupport   : true,
+    })
+    </script>
+</body>
+</html>
