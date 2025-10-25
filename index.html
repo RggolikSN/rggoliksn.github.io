@@ -153,24 +153,6 @@
             content.style.display = 'block'; 
         }, 84);  
         };
-    async function ping(url) {
-    const start = performance.now();
-    try {
-        const response = await fetch(url, {    
-        cache: 'no-cache',
-        mode: 'no-cors',
-        method: 'HEAD'
-        });
-        const end = performance.now();
-        console.log(`P. ${(end - start).toFixed(2)}`);
-    } catch (error) {
-        console.error(`${error.message}`);
-    }
-    }
-    ping('https://rggoliksn.github.io');
-    setInterval(function(){
-        ping('https://rggoliksn.github.io');
-    },1000)
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <script>
